@@ -7,7 +7,7 @@ conflicting version requirements.
 4. Install Sublime Text 4, Package Manager, and LSP
 5. Open LSP Settings and update it with the following:
 
-```json
+```
 {
     "clients": {
         "pyls": {
@@ -41,7 +41,7 @@ conflicting version requirements.
 
 6. When working on a project you can also define settings:
 
-```json
+```
 {
     "settings": {
         "LSP": {
