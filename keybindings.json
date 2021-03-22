@@ -1,0 +1,49 @@
+[
+  // Vim bindings on overlays
+  {
+    "keys": ["ctrl+j"], "command": "move", "args": {"by": "lines", "forward": true},
+    "context": [{ "key": "overlay_visible", "operator": "equal", "operand": true }]
+  }, 
+  {
+    "keys": ["ctrl+k"], "command": "move", "args": {"by": "lines", "forward": false},
+    "context": [{ "key": "overlay_visible", "operator": "equal", "operand": true }]
+  }, 
+
+  // Origami tmux-like bindings
+  { "keys": ["ctrl+a", "k"], "command": "travel_to_pane", "args": {"direction": "up"} },
+  { "keys": ["ctrl+a", "l"], "command": "travel_to_pane", "args": {"direction": "right"} },
+  { "keys": ["ctrl+a", "j"], "command": "travel_to_pane", "args": {"direction": "down"} },
+  { "keys": ["ctrl+a", "h"], "command": "travel_to_pane", "args": {"direction": "left"} },
+
+  { "keys": ["ctrl+a", "alt+k"], "command": "carry_file_to_pane", "args": {"direction": "up"} },
+  { "keys": ["ctrl+a", "alt+l"], "command": "carry_file_to_pane", "args": {"direction": "right"} },
+  { "keys": ["ctrl+a", "alt+j"], "command": "carry_file_to_pane", "args": {"direction": "down"} },
+  { "keys": ["ctrl+a", "alt+h"], "command": "carry_file_to_pane", "args": {"direction": "left"} },
+
+  // { "keys": ["ctrl+a", "alt+k"], "command": "clone_file_to_pane", "args": {"direction": "up"} },
+  // { "keys": ["ctrl+a", "alt+l"], "command": "clone_file_to_pane", "args": {"direction": "right"} },
+  // { "keys": ["ctrl+a", "alt+j"], "command": "clone_file_to_pane", "args": {"direction": "down"} },
+  // { "keys": ["ctrl+a", "alt+h"], "command": "clone_file_to_pane", "args": {"direction": "left"} },
+  // You can also create the pane automatically with the following command (insert empty parameters):
+  // { "keys": [], "command": "create_pane_with_cloned_file", "args": {"direction": ""} }
+
+  { "keys": ["ctrl+a", "super+k"], "command": "create_pane", "args": {"direction": "up"} },
+  { "keys": ["ctrl+a", "super+l"], "command": "create_pane", "args": {"direction": "right"} },
+  { "keys": ["ctrl+a", "super+j"], "command": "create_pane", "args": {"direction": "down"} },
+  { "keys": ["ctrl+a", "super+h"], "command": "create_pane", "args": {"direction": "left"} },
+  // You can also add  "give_focus": true to automatically focus on the new pane as follows:
+  // { "keys": [], "command": "create_pane", "args": {"direction": "", "give_focus": true} }
+
+  { "keys": ["ctrl+a", "ctrl+shift+k"], "command": "destroy_pane", "args": {"direction": "up"} },
+  { "keys": ["ctrl+a", "ctrl+shift+l"], "command": "destroy_pane", "args": {"direction": "right"} },
+  { "keys": ["ctrl+a", "ctrl+shift+j"], "command": "destroy_pane", "args": {"direction": "down"} },
+  { "keys": ["ctrl+a", "ctrl+shift+h"], "command": "destroy_pane", "args": {"direction": "left"} },
+  // You can also destroy the current pane by binding the following command:
+  // { "keys": [], "command": "destroy_pane", "args": {"direction": "self"} },
+
+  { "keys": ["ctrl+a", "ctrl+alt+k"], "command": "create_pane_with_file", "args": {"direction": "up"} },
+  { "keys": ["ctrl+a", "ctrl+alt+l"], "command": "create_pane_with_file", "args": {"direction": "right"} },
+  { "keys": ["ctrl+a", "ctrl+alt+j"], "command": "create_pane_with_file", "args": {"direction": "down"} },
+  { "keys": ["ctrl+a", "ctrl+alt+h"], "command": "create_pane_with_file", "args": {"direction": "left"} },
+]
+
