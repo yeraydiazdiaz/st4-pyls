@@ -16,7 +16,7 @@ conflicting version requirements.
                 "<PATH_TO_ENV>/bin/pyls",
                 // Uncomment for debugging
                 // "--log-file",
-                // "/Users/yeray/code/personal/pyls/pyls.log",
+                // "<PATH_TO_LOG>/pyls.log",
                 // "--verbose"
             ],
             "selector": "source.python",
@@ -77,6 +77,13 @@ If things are not working as expected uncomment the extra arguments in the pyls
 `command` settings, in a terminal `tail` the log to gain insight on the possible
 problems. The server restarts on changes to the configuration, but sometimes you
 may need to restart Sublime Text.
+
+"pyls exited with exit code 1", I haven't been able to find logs to help in
+these situations but try:
+
+- Double checking paths in the LSP configuration, a non-existing path in log-file will cause this
+error.
+- Removing the LSP configuration from your project settings.
 
 ## Projects and docs
 
